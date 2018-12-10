@@ -7,7 +7,7 @@ class Application
 
 
    if req.path.match(/items/)
-      item_name = req.path.split("/items/").last #turn /songs/item_name as item name
+      item_name = req.path.split("/items/").last #turn /items/item_name as item name
       item_inst  = @@items.find{|item| item.name == item_name}
       if item_inst == nil
         resp.write "Item not found"
